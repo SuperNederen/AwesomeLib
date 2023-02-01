@@ -20,13 +20,22 @@ import java.util.logging.Level;
 public final class AwesomeLib extends JavaPlugin {
 
     @Getter
+    public static final String PREFIX = "§8[§6AwesomeLib§8]§r ";
+    @Getter
+    public String VERSION;
+
+    @Getter
     private static AwesomeLib instance;
 
     @Override
     public void onEnable() {
         instance = this;
+        VERSION = getDescription().getVersion();
+
+        new AwesomeCommand(this);
 
         getLogger().log(Level.INFO, "AwesomeLib has been enabled!");
+        getLogger().log(Level.INFO, "AwesomeLib version: " + getInstance().getVERSION());
     }
 
     @Override
@@ -34,5 +43,8 @@ public final class AwesomeLib extends JavaPlugin {
         // Plugin shutdown logic
 
         getLogger().log(Level.INFO, "AwesomeLib has been disabled!");
+        getLogger().log(Level.INFO, "AwesomeLib version: " + getInstance().getVERSION());
+
+        instance = null;
     }
 }

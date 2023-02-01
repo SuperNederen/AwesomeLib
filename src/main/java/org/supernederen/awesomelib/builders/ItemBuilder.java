@@ -24,7 +24,7 @@ import java.util.*;
  *     <a href="https://github.com/SuperNederen/AwesomeLib">AwesomeLib</a> is licensed under the MIT license.
  * </p>
  * @author WildTooth
- * @since 1.0
+ * @since 1.0.0
  */
 public final class ItemBuilder {
     private final ItemStack itemStack;

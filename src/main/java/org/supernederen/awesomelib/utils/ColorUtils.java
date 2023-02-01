@@ -8,7 +8,7 @@ import java.util.List;
  * Utility class for translating strings with color codes
  *
  * @author WildTooth
- * @since 1.0
+ * @since 1.0.0
  */
 public final class ColorUtils {
 

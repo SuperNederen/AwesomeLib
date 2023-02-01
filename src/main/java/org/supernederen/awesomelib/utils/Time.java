@@ -15,7 +15,7 @@ import java.util.List;
  *     <a href="https://github.com/SuperNederen/AwesomeLib">AwesomeLib</a> is licensed under the MIT license.
  * </p>
  * @author WildTooth
- * @since 1.0
+ * @since 1.0.0
  */
 public final class Time {
     private static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");

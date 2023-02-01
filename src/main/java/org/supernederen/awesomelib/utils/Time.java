@@ -7,10 +7,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A Class to help format time.
+ * Utility class for formatting time.
+ * This class is not meant to be instantiated.
+ *
+ * <p>
+ *     This class is part of the AwesomeLib project.
+ *     <a href="https://github.com/SuperNederen/AwesomeLib">AwesomeLib</a> is licensed under the MIT license.
+ * </p>
+ * @author WildTooth
+ * @since 1.0
  */
-public class Time {
+public final class Time {
     private static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
+
+    private Time() {
+        throw new IllegalStateException("Utility class, do not instantiate");
+    }
 
     /**
      * Current unix-timestamp in seconds.

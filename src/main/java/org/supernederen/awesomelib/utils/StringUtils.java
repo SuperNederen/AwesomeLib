@@ -4,7 +4,18 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class StringUtils {
+/**
+ * A utility class for strings.
+ * This class is not meant to be instantiated.
+ *
+ * <p>
+ *     This class is part of the AwesomeLib project.
+ *     <a href="https://github.com/SuperNederen/AwesomeLib">AwesomeLib</a> is licensed under the MIT license.
+ * </p>
+ * @author WildTooth
+ * @since 1.0
+ */
+public final class StringUtils {
 
     private StringUtils() {
         throw new IllegalStateException("Utility class, cannot be instantiated");

@@ -1,0 +1,7 @@
+name: AwesomeLib
+version: '${project.version}'
+main: org.supernederen.awesomelib.AwesomeLib
+api-version: 1.19
+authors: [ Champen_V1ldtand ]
+description: A Library plugin for spigot plugin development
+website: https://github.com/SuperNederen/AwesomeLib

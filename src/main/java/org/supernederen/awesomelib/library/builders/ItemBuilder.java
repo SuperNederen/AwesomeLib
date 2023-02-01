@@ -1,4 +1,4 @@
-package org.supernederen.awesomelib.builders;
+package org.supernederen.awesomelib.library.builders;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
@@ -12,7 +12,7 @@ import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
-import org.supernederen.awesomelib.utils.ColorUtils;
+import org.supernederen.awesomelib.library.utils.ColorUtils;
 
 import java.util.*;
 

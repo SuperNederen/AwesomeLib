@@ -1,4 +1,4 @@
-package org.supernederen.awesomelib.utils;
+package org.supernederen.awesomelib.library.utils;
 
 import org.bukkit.ChatColor;
 

@@ -1,4 +1,4 @@
-package org.supernederen.awesomelib.builders;
+package org.supernederen.awesomelib.library.builders;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;

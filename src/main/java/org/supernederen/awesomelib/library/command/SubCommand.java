@@ -1,7 +1,8 @@
-package org.supernederen.awesomelib.command;
+package org.supernederen.awesomelib.library.command;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.supernederen.awesomelib.library.command.Command;
 
 /**
  * A sub command of a command.

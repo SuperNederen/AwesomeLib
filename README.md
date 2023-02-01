@@ -16,8 +16,8 @@ Simple utilities for your minecraft plugin development experience
 </repositories>
 <dependencies>
     <dependency>
-        <groupId>com.github.SuperNederen.AwesomeLib</groupId>
-        <artifactId>packaging</artifactId>
+        <groupId>com.github.SuperNederen</groupId>
+        <artifactId>AwesomeLib</artifactId>
         <version>{VERSION}</version>
         <scope>provided</scope>
     </dependency>

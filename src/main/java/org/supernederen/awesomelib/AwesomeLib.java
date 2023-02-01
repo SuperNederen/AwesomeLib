@@ -15,7 +15,7 @@ import java.util.logging.Level;
  *     <a href="https://github.com/SuperNederen/AwesomeLib">AwesomeLib</a> is licensed under the MIT license.
  * </p>
  * @author WildTooth
- * @since 1.0
+ * @since 1.0.0
  */
 public final class AwesomeLib extends JavaPlugin {
 

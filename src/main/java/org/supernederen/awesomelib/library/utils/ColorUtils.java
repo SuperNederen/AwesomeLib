@@ -7,6 +7,10 @@ import java.util.List;
 /**
  * Utility class for translating strings with color codes
  *
+ * <p>
+ *     This class is part of the AwesomeLib project.
+ *     <a href="https://github.com/SuperNederen/AwesomeLib">AwesomeLib</a> is licensed under the MIT license.
+ * </p>
  * @author WildTooth
  * @since 1.0.0
  */

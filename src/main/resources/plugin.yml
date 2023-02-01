@@ -19,5 +19,4 @@ commands:
       description: AwesomeLib command
       aliases: [al, awesome, awesomecommand, awecmd]
       permission: awesomelib.command.awesomelib
-      usage: /awesomelib
       permission-message: You do not have permission to use this command

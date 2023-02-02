@@ -6,7 +6,7 @@ import org.supernederen.awesomelib.library.command.Command;
 
 /**
  * A sub command of a command.
- * It's usecase os to be used in a {@link Command} class.
+ * It's use case os to be used in a {@link Command} class.
  * It's used for making more complex commands.
  *
  * <p>

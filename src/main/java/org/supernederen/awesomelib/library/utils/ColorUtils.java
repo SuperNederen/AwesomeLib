@@ -1,6 +1,8 @@
 package org.supernederen.awesomelib.library.utils;
 
 import org.bukkit.ChatColor;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -55,7 +57,8 @@ public final class ColorUtils {
      * @param s The string to translate
      * @return The translated string
      */
-    public static String colorize(String s){
+    @Contract("_ -> new")
+    public static @NotNull String colorize(String s){
         return ChatColor.translateAlternateColorCodes('&', s);
     }
 

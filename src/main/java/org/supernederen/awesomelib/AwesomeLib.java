@@ -32,7 +32,7 @@ public final class AwesomeLib extends JavaPlugin {
         instance = this;
         version = getDescription().getVersion();
 
-        new AwesomeCommand(this);
+        new AwesomeCommand(getInstance());
 
         getLogger().log(Level.INFO, "AwesomeLib has been enabled!");
         getLogger().log(Level.INFO, "AwesomeLib version: " + getInstance().getVersion());

@@ -123,7 +123,7 @@ public final class ItemBuilder {
     public ItemBuilder(Material material, int amount, short durability, String name, String... lore) {
         this(new ItemStack(material, amount, durability));
         this.name(name);
-        this.lore(lore);
+        this.setLore(lore);
     }
 
     /**
@@ -302,7 +302,7 @@ public final class ItemBuilder {
         if (this.itemMeta.hasLore()) {
             List<String> lore = this.getItemMeta().getLore();
             lore.replaceAll(ColorUtils::colorize);
-            return this.lore(lore);
+            return this.setLore(lore);
         }
         return this;
     }
@@ -343,8 +343,8 @@ public final class ItemBuilder {
      * @param lore the lore to set
      * @return the ItemBuilder instance
      */
-    public ItemBuilder lore(String... lore) {
-        return this.lore(Arrays.asList(lore));
+    public ItemBuilder setLore(String... lore) {
+        return this.setLore(Arrays.asList(lore));
     }
 
     /**
@@ -353,7 +353,7 @@ public final class ItemBuilder {
      * @param lore the lore to set
      * @return the ItemBuilder instance
      */
-    public ItemBuilder lore(List<String> lore) {
+    public ItemBuilder setLore(List<String> lore) {
         this.itemMeta.setLore(lore);
         return this;
     }

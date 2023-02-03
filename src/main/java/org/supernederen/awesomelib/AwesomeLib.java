@@ -20,9 +20,9 @@ import java.util.logging.Level;
 public final class AwesomeLib extends JavaPlugin {
 
     @Getter
-    public static final String PREFIX = "§8[§6AwesomeLib§8]§r ";
+    private static final String PREFIX = "§8[§6AwesomeLib§8]§r ";
     @Getter
-    public String version;
+    private String version;
 
     @Getter
     private static AwesomeLib instance;

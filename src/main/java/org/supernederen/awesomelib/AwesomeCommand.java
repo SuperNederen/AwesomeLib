@@ -25,6 +25,7 @@ public class AwesomeCommand implements CommandExecutor {
 
     public AwesomeCommand(AwesomeLib plugin) {
         this.plugin = plugin;
+        //noinspection SpellCheckingInspection
         Bukkit.getPluginCommand("awesomelib").setExecutor(this);
     }
     @Override

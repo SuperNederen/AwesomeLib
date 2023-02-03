@@ -45,7 +45,7 @@ public abstract class Command {
      */
     protected boolean isPlayer(CommandSender sender, boolean notify) {
         if (sender instanceof Player) return true;
-        if (notify) sender.sendMessage("Du skal være en spiller for at bruge denne kommando.");
+        if (notify) sender.sendMessage("Only players can execute this command, not the console.");
         return false;
     }
 
@@ -73,7 +73,7 @@ public abstract class Command {
      */
     protected boolean hasPermission(CommandSender sender, String permission, boolean notify) {
         if (sender.hasPermission(permission)) return true;
-        if (notify) sender.sendMessage("Du har ikke adgang til denne kommando.");
+        if (notify) sender.sendMessage("You don't have access to this command.");
         return false;
     }
 

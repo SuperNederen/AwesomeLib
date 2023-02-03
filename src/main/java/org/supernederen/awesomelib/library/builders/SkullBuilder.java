@@ -35,6 +35,7 @@ import java.util.UUID;
  * @author Dean B on 12/28/2016.
  * @since 1.0.0
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class SkullBuilder {
 
     private SkullBuilder() {

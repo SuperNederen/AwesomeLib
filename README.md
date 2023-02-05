@@ -8,13 +8,16 @@ Simple utilities for your minecraft plugin development experience
 
 ### :exclamation: Implementation:
 
+#### Maven
 ``` apache maven
 <repositories>
     <repository>
         <id>jitpack.io</id>
         <url>https://jitpack.io</url>
     </repository>
-</repositories>
+</repositories>`
+```
+``` apache maven
 <dependencies>
     <dependency>
         <groupId>com.github.SuperNederen</groupId>
@@ -24,3 +27,18 @@ Simple utilities for your minecraft plugin development experience
     </dependency>
 </dependencies>
 ```
+
+#### Gradle
+
+``` gradle
+repositories {
+	maven { url 'https://jitpack.io' }
+}
+```
+``` gradle
+dependencies {
+	implementation 'com.github.ImDaMilan:SpigotAdditions:1.2.1'
+}
+```
+
+* Remember to [soft]depend on AwesomeLib inside your plugin.yml file

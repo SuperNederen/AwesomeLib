@@ -6,7 +6,7 @@
 
     <groupId>org.supernederen</groupId>
     <artifactId>AwesomeLib</artifactId>
-    <version>1.1.0-alpha.1</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>AwesomeLib</name>

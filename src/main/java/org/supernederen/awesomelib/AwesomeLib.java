@@ -2,6 +2,8 @@ package org.supernederen.awesomelib;
 
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
+import org.supernederen.awesomelib.library.events.Listeners;
 
 import java.util.logging.Level;
 
@@ -31,6 +33,12 @@ public final class AwesomeLib extends JavaPlugin {
     public void onEnable() {
         instance = this;
         version = getDescription().getVersion();
+
+        new BukkitRunnable() {
+            public @Override void run() {
+                new Listeners().register();
+            }
+        }.runTaskLater(this, 1);
 
         new AwesomeCommand(getInstance());
 

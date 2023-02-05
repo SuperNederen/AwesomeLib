@@ -37,7 +37,7 @@ repositories {
 ```
 ``` gradle
 dependencies {
-	implementation 'com.github.ImDaMilan:SpigotAdditions:1.2.1'
+	implementation 'com.github.SuperNederen:AwesomeLib:RELEASE'
 }
 ```
 

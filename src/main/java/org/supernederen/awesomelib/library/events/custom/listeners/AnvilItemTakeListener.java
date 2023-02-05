@@ -2,6 +2,7 @@ package org.supernederen.awesomelib.library.events.custom.listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.AnvilInventory;
 import org.supernederen.awesomelib.library.events.Listener;
 import org.supernederen.awesomelib.library.events.custom.AnvilItemTakeEvent;
@@ -19,25 +20,19 @@ import org.supernederen.awesomelib.library.events.custom.AnvilItemTakeEvent;
 public class AnvilItemTakeListener {
     public static @Listener void onAnvilItemTake(InventoryClickEvent event) {
         if (event.getInventory() instanceof AnvilInventory) {
-            AnvilInventory inventory = (AnvilInventory) event.getInventory();
-            if (event.getSlot() == 2) {
-                if (event.getCurrentItem() != null) {
-                    Bukkit.getPluginManager().callEvent(new AnvilItemTakeEvent(Bukkit.getPlayer(event.getWhoClicked().getUniqueId()), event.getCurrentItem(), inventory));
-                }
-            }
+            handle(event);
         } else if (event.getClickedInventory() instanceof AnvilInventory) {
-            AnvilInventory inventory = (AnvilInventory) event.getInventory();
-            if (event.getSlot() == 2) {
-                if (event.getCurrentItem() != null) {
-                    Bukkit.getPluginManager().callEvent(new AnvilItemTakeEvent(Bukkit.getPlayer(event.getWhoClicked().getUniqueId()), event.getCurrentItem(), inventory));
-                }
-            }
+            handle(event);
         } else if (event.getWhoClicked().getOpenInventory().getTopInventory() instanceof AnvilInventory) {
-            AnvilInventory inventory = (AnvilInventory) event.getInventory();
-            if (event.getSlot() == 2) {
-                if (event.getCurrentItem() != null) {
-                    Bukkit.getPluginManager().callEvent(new AnvilItemTakeEvent(Bukkit.getPlayer(event.getWhoClicked().getUniqueId()), event.getCurrentItem(), inventory));
-                }
+            handle(event);
+        }
+    }
+
+    private static void handle(InventoryClickEvent event) {
+        AnvilInventory inventory = (AnvilInventory) event.getInventory();
+        if (event.getSlot() == 2 && event.getSlotType() == InventoryType.SlotType.RESULT) {
+            if (event.getCurrentItem() != null && event.getCurrentItem().getItemMeta() != null) {
+                Bukkit.getPluginManager().callEvent(new AnvilItemTakeEvent(Bukkit.getPlayer(event.getWhoClicked().getUniqueId()), event.getCurrentItem(), inventory));
             }
         }
     }

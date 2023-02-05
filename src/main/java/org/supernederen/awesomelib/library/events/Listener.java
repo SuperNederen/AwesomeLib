@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 
 /**
  * This annotation is used to register a method as a listener.
- * The method must have one parameter, which is the event.
+ * The method must have one parameter, which is the event. The method must be static.
  *
  * <p>
  *     This class is part of the AwesomeLib project.

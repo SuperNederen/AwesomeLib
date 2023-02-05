@@ -1,4 +1,5 @@
 # AwesomeLib
+[![](https://jitpack.io/v/SuperNederen/AwesomeLib.svg)](https://jitpack.io/#SuperNederen/AwesomeLib)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Simple utilities for your minecraft plugin development experience

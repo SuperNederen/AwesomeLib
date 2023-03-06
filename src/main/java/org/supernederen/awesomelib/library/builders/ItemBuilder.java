@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.material.MaterialData;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.supernederen.awesomelib.library.utils.ColorUtils;
@@ -324,7 +325,7 @@ public final class ItemBuilder {
      * @return the ItemBuilder instance
      */
     public ItemBuilder unbreakable(boolean unbreakable) {
-        this.itemMeta.spigot().setUnbreakable(unbreakable);
+        this.itemMeta.setUnbreakable(unbreakable);
         return this;
     }
 
@@ -485,7 +486,7 @@ public final class ItemBuilder {
      */
     @Contract("_ -> this")
     public ItemBuilder setColor(@NotNull DyeColor color) {
-        this.itemStack.setDurability(color.getData());
+        this.itemStack.setData(new MaterialData(this.itemStack.getType(), color.getWoolData()));
         return this;
     }
 

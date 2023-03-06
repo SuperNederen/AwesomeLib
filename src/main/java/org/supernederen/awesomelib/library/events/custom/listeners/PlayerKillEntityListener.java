@@ -8,7 +8,7 @@ import org.supernederen.awesomelib.library.events.Listener;
 import org.supernederen.awesomelib.library.events.custom.PlayerKillEntityEvent;
 
 /**
- * A class that listens for the PlayerKillEntityEvent.
+ * A class that fires the {@link PlayerKillEntityEvent}.
  *
  * <p>
  *     This class is part of the AwesomeLib project.

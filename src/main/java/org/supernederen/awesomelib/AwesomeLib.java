@@ -1,9 +1,11 @@
 package org.supernederen.awesomelib;
 
 import lombok.Getter;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.supernederen.awesomelib.library.events.Listeners;
+import org.supernederen.awesomelib.library.events.custom.listeners.PlayerQuitWhileCraftingListener;
 
 import java.util.logging.Level;
 
@@ -41,6 +43,7 @@ public final class AwesomeLib extends JavaPlugin {
         }.runTaskLater(this, 1);
 
         new AwesomeCommand(getInstance());
+        Bukkit.getPluginManager().registerEvents(new PlayerQuitWhileCraftingListener() , getInstance());
 
         getLogger().log(Level.INFO, "AwesomeLib has been enabled!");
         getLogger().log(Level.INFO, "AwesomeLib version: " + getInstance().getVersion());

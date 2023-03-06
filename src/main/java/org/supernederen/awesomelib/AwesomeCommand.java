@@ -30,7 +30,7 @@ public class AwesomeCommand implements CommandExecutor {
     }
     @Override
     public boolean onCommand(@NotNull CommandSender sender, Command command, String label, String[] args) {
-        sender.sendMessage(ColorUtils.colorize("&6AwesomeLib version &bv" + plugin.getVersion()));
+        sender.sendMessage(ColorUtils.color("&6AwesomeLib version &bv" + plugin.getVersion()));
         return false;
     }
 

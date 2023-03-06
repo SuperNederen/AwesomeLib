@@ -301,7 +301,7 @@ public final class ItemBuilder {
     public ItemBuilder colorizeLore() {
         if (this.itemMeta.hasLore()) {
             List<String> lore = this.getItemMeta().getLore();
-            lore.replaceAll(ColorUtils::colorize);
+            lore.replaceAll(ColorUtils::color);
             return this.setLore(lore);
         }
         return this;
@@ -313,7 +313,7 @@ public final class ItemBuilder {
      * @return the ItemBuilder instance
      */
     public ItemBuilder colorizeName() {
-        if (this.itemMeta.hasDisplayName()) this.name(ColorUtils.colorize(this.getItemMeta().getDisplayName()));
+        if (this.itemMeta.hasDisplayName()) this.name(ColorUtils.color(this.getItemMeta().getDisplayName()));
         return this;
     }
 

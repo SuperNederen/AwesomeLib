@@ -1,6 +1,7 @@
 package org.supernederen.awesomelib.library.utils;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Warning;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,6 +23,34 @@ public final class ColorUtils {
         throw new IllegalStateException("Utility class, cannot be instantiated");
     }
 
+    /** @deprecated in favor of {@link #color(String...)} */
+    @Deprecated
+    @Warning(reason = "Use color(String...) instead")
+    public static String[] colorize(String... stringList){
+        if(stringList == null) return null;
+        for(int i = 0; i< stringList.length;i++)
+            stringList[i] = colorize(stringList[i]);
+        return stringList;
+    }
+
+    /** @deprecated in favor of {@link #color(List of String)} */
+    @Deprecated
+    @Warning(reason = "Use color(List<String>) instead")
+    public static List<String> colorize(List<String> stringList){
+        if(stringList == null) return null;
+        for(int i = 0; i< stringList.size();i++)
+            stringList.set(i, colorize(stringList.get(i)));
+        return stringList;
+    }
+
+    /** @deprecated in favor of {@link #color(String)} */
+    @Deprecated
+    @Warning(reason = "Use color(String) instead")
+    @Contract("_ -> new")
+    public static @NotNull String colorize(String s){
+        return ChatColor.translateAlternateColorCodes('&', s);
+    }
+
     /**
      * Translates a string using an alternate color code character into
      * an array of Strings that uses the internal {@link ChatColor}.COLOR_CODE
@@ -29,7 +58,7 @@ public final class ColorUtils {
      * @param stringList The string(s) to translate
      * @return The translated string(s)
      */
-    public static String[] colorize(String... stringList){
+    public static String[] color(String... stringList){
         if(stringList == null) return null;
         for(int i = 0; i< stringList.length;i++)
             stringList[i] = colorize(stringList[i]);
@@ -43,7 +72,7 @@ public final class ColorUtils {
      * @param stringList The string(s) to translate
      * @return The translated string(s)
      */
-    public static List<String> colorize(List<String> stringList){
+    public static List<String> color(List<String> stringList){
         if(stringList == null) return null;
         for(int i = 0; i< stringList.size();i++)
             stringList.set(i, colorize(stringList.get(i)));
@@ -58,9 +87,7 @@ public final class ColorUtils {
      * @return The translated string
      */
     @Contract("_ -> new")
-    public static @NotNull String colorize(String s){
+    public static @NotNull String color(String s){
         return ChatColor.translateAlternateColorCodes('&', s);
     }
-
-
 }

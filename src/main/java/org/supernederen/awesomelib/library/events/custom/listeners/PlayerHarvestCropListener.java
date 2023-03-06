@@ -33,7 +33,17 @@ public class PlayerHarvestCropListener {
             case SUGAR_CANE:
             case MELON:
             case PUMPKIN:
-            case NETHER_WARTS:
+            case NETHER_WART:
+            case BEETROOT:
+            case BAMBOO:
+            case KELP:
+            case CHORUS_FLOWER:
+            case CACTUS:
+            case SWEET_BERRY_BUSH:
+            case WARPED_FUNGUS:
+            case CRIMSON_FUNGUS:
+            case BROWN_MUSHROOM:
+            case RED_MUSHROOM:
                 return true;
             default:
                 return false;
